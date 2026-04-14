@@ -1,4 +1,4 @@
-package edu.bilak.opensourcekeycloaklab;
+package edu.kost.opensourcekeycloaklab;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
