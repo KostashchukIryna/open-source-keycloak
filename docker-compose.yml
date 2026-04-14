@@ -1,9 +1,8 @@
 version: '3'
-
 services:
   keycloak:
     container_name: keycloak-demo
-    image: quay.io/keycloak/keycloak:latest
+    image: quay.io/keycloak/keycloak:26.6
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
@@ -13,8 +12,11 @@ services:
       - keycloak-spring-net
     command:
       - "start-dev"
-
+    volumes:
+      - keycloak_data:/opt/keycloak/data
 networks:
   keycloak-spring-net:
     driver: bridge
+volumes:
+  keycloak_data:
     
